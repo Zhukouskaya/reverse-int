@@ -1,10 +1,16 @@
 module.exports = function reverse (n) {
-  let result = 0;
-  while (n) {
-    result = result * 10 + n % 10;
-    n = Math.floor(n / 10);
+  let str;
+  if (n > 0) {
+    str = String(n);
+  } else { 
+    str = String(Math.abs(n));
   }
-  return result;
+  
+  let w = str.toString();
+  let e = w.split("").reverse().join("");
+  let reverseResalt  = Number(e);
+
+  return reverseResalt ;
   //
 } 
 
